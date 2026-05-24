@@ -106,7 +106,7 @@ const Register = () => {
       await toast.success(res.data.message);
 
       setTimeout(() => {
-        navigate("/Dashboard");
+        navigate("/dashboard");
       }, 2000);
     } else {
       await toast.error("Registrtion failed");

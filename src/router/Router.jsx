@@ -19,12 +19,12 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/Auth" element={<AuthLayout />}>
+        <Route path="/auth" element={<AuthLayout />}>
           <Route index element={<Register />} />
           <Route path="login" element={<Signup />} />
         </Route>
 
-        <Route path="/Dashboard" element={<ContentLayout />}>
+        <Route path="/dashboard" element={<ContentLayout />}>
           <Route index element={<DashboardGrid />} />
         </Route>
       </Routes>
