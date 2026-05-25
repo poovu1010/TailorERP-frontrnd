@@ -29,7 +29,7 @@ const Signup = () => {
      
 
       const res = await axios.post(
-        "http://localhost:5000/Owner/login",
+        "http://13.234.233.164:5000/Owner/login",
         {
           email: input.Email,
           password: input.Password,

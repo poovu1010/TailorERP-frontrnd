@@ -92,7 +92,7 @@ const Register = () => {
       // }),
 
       const res = await axios.post(
-        "http://localhost:5000/Owner/Signup",
+        "http://13.234.233.164:5000/Owner/Signup",
         {
           userName: input.FullName,
           email: input.Email,
