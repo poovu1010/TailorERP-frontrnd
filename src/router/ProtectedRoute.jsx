@@ -10,7 +10,7 @@ export default function ProtectedRoute({children}) {
     async function isVerified() {
       try {
 
-        const res = await axios.get("http://localhost:5000/Owner/Verify",{withCredentials:true})
+        const res = await axios.get("http://3.220.158.94:5000/Owner/Verify",{withCredentials:true})
       
 
       setAuth(true)
