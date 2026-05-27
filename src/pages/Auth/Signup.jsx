@@ -29,7 +29,8 @@ const Signup = () => {
      
 
       const res = await axios.post(
-        "https://13.234.233.164:5000/Owner/login",
+        // "https://13.234.233.164:5000/Owner/login",
+        "http://localhost:5000/Owner/login",
         {
           email: input.Email,
           password: input.Password,
@@ -37,19 +38,18 @@ const Signup = () => {
 
         { withCredentials: true },
 
-        
       );
-
       console.log(res);
-       toast.success(res.data.message);
+      toast.success(res.data.message);
+      setTimeout(() => {
+      navigate("/dashboard");
+    }, 2000);
     } catch (error) {
          console.log(error.response.data);
          toast.error(error.response.data.message)
     }
 
-    setTimeout(() => {
-      navigate("/dashboard");
-    }, 2000);
+    
   }
 
   return (
@@ -141,7 +141,7 @@ const Signup = () => {
           <p className="text-gray-600">
             Don't have an account?
             <span className="text-purple-600 font-medium ml-1 cursor-pointer">
-              <Link to={"/"}> Register</Link>
+              <Link to={"/auth"}> Register</Link>
             </span>
           </p>
         </div>

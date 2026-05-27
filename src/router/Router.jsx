@@ -13,6 +13,8 @@ import DashboardGrid from "../pages/DashBoard";
 
 import AuthLayout from "../Layout/AuthLayout";
 import IndexPage from "../pages/IndexPage";
+import CustomerPage from "../pages/CustomerPage";
+import ProtectedRoute from "./ProtectedRoute";
 
 const Router = () => {
   const { authData } = useContext(AuthDetails);
@@ -27,8 +29,11 @@ const Router = () => {
           <Route path="login" element={<Signup />} />
         </Route>
 
-        <Route path="/dashboard" element={<ContentLayout />}>
+
+
+        <Route path="/dashboard" element={ <ProtectedRoute> <ContentLayout /></ProtectedRoute>}>
           <Route index element={<DashboardGrid />} />
+          <Route path="CustomerPage" element={<CustomerPage/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

@@ -10,7 +10,7 @@ export default function BottomBar() {
   // Array of navigation items to keep the JSX clean
   const navItems = [
     { id: "dashboard", label: "Dashboard", Icon: Home, Link: "/Dashboard" },
-    { id: "customers", label: "Customers", Icon: Users },
+    { id: "customers", label: "Customers", Icon: Users,Link:"/Dashboard/CustomerPage" },
     { id: "orders", label: "Orders", Icon: GitMerge }, // Closest match to the branching node icon
     { id: "reports", label: "Reports", Icon: Layout }, // Closest match to the split panel icon
     { id: "more", label: "More", Icon: MoreHorizontal },
@@ -21,7 +21,7 @@ export default function BottomBar() {
     <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-white rounded-b-[40px] border-t border-gray-100 shadow-[0_-2px_10px_rgba(0,0,0,0.02)] pt-3 pb-2 px-6">
       {/* Navigation Icons Container */}
       <div className="flex justify-between items-center">
-        {navItems.map(({ id, label, Icon }) => {
+        {navItems.map(({ id, label, Icon,Link }) => {
           const isActive = activeTab === id;
 
           return (
@@ -29,6 +29,7 @@ export default function BottomBar() {
               key={id}
               onClick={() => {
                 setActiveTab(id);
+                navigate(Link)
               }}
               className="flex flex-col items-center gap-1.5 focus:outline-none"
             >

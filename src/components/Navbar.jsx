@@ -19,7 +19,7 @@ export default function Navbar() {
         FIX 1: "sticky top-0" must be on the nav itself. 
         "z-40" ensures it stays above page content but below the sidebar.
       */}
-      <nav className="sticky top-0 z-40 w-full flex items-center justify-between px-4 py-3 bg-white border-b shadow-sm">
+      <nav className="sticky top-0 z-50 w-full flex items-center justify-between px-4 py-3 bg-white border-b shadow-sm">
         {/* Menu Button */}
         <button
           onClick={() => setIsSidebarOpen(true)}
