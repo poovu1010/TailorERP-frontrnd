@@ -13,7 +13,7 @@ export function UserDetails({ children }) {
   useEffect(()=>{
 
     async function getUserFunc(){
-       const customer_data = await axios.get("http://localhost:5000/Owner/get-all-user",{ withCredentials: true })
+       const customer_data = await axios.get("http://3.220.158.94:5000/Owner/get-all-user",{ withCredentials: true })
        getCustomers(customer_data.data)
       
     }

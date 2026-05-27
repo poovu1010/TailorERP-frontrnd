@@ -20,7 +20,8 @@ let customerList = Customers?.data || [];
 
   async function deleteCustomers(id){
     const isdeleted = await axios.delete(
-    `http://localhost:5000/Owner/deleteCustomer/${id}`,
+    // `http://localhost:5000/Owner/deleteCustomer/${id}`,
+    `http://3.220.158.94:5000/Owner/deleteCustomer/${id}`,
     { withCredentials: true }
   );
 

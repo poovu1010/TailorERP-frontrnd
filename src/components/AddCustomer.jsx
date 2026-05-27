@@ -29,7 +29,7 @@ export default function AddCustomer() {
     try {
       
     e.preventDefault()
-    const sendData = await axios.post("http://localhost:5000/Owner/newCustomer",{
+    const sendData = await axios.post("http://3.220.158.94:5000/Owner/newCustomer",{
       customer_name:input.customer_name,
       Phone:input.Phone,
       Address:input.Address
