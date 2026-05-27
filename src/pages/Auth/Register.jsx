@@ -92,7 +92,7 @@ const Register = () => {
       // }),
 
       const res = await axios.post(
-        "https://3.220.158.94:5000/Owner/Signup",
+        "http://3.220.158.94:5000/Owner/Signup",
         // "http://localhost:5000/Owner/Signup",
         {
           userName: input.FullName,
