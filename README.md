@@ -27,7 +27,7 @@ I actually wanted to exist.
 cd server
 npm install
 npm start
-link-
+link-https://github.com/poovu1010/Tailor-Erp-backend
 
 # Frontend
 cd client
